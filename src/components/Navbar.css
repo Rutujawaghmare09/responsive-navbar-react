@@ -1,0 +1,139 @@
+/* Google Font Feel */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Navbar background gradient */
+
+.navbar{
+width:100%;
+position:sticky;
+top:0;
+z-index:1000;
+background:linear-gradient(135deg,#1e293b,#0f172a);
+backdrop-filter: blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Container */
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 30px;
+}
+
+/* Logo */
+
+.logo{
+font-size:26px;
+font-weight:600;
+color:#375dd8;
+letter-spacing:1px;
+cursor:pointer;
+}
+.img{
+    height: 150px;
+    width: 200px;
+}
+
+/* Links */
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:35px;
+list-style:none;
+}
+
+/* Link style */
+
+.nav-links li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+position:relative;
+transition:0.3s;
+}
+
+/* Animated underline */
+
+.nav-links li a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-4px;
+background:#38bdf8;
+transition:0.3s;
+}
+
+.nav-links li a:hover::after{
+width:100%;
+}
+
+/* CTA Button */
+
+.nav-btn{
+padding:8px 18px;
+border:none;
+background:#38bdf8;
+color:#0f172a;
+font-weight:500;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.nav-btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
+
+/* Hamburger */
+
+.hamburger{
+display:none;
+font-size:26px;
+color:white;
+cursor:pointer;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+left:-100%;
+flex-direction:column;
+width:100%;
+background:#0f172a;
+padding:30px 0;
+gap:25px;
+transition:0.4s;
+}
+
+.nav-links.active{
+left:0;
+}
+
+.hamburger{
+display:block;
+}
+
+.nav-btn{
+margin-top:10px;
+}
+
+}
